@@ -1,4 +1,4 @@
-const 4eveColor = "#A80E15";
+const foureveColor = "#A80E15";
 
 Blockly.Blocks['members'] = {
     init: function() {
@@ -12,6 +12,6 @@ Blockly.Blocks['members'] = {
       this.setInputsInline(true);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      this.setColour(4eveColor);
+      this.setColour(foureveColor);
     }
 };
