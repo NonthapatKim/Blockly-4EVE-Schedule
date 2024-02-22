@@ -1,3 +1,5 @@
+const ml4kidsColor = "#A80E15";
+
 Blockly.Blocks['members'] = {
     init: function() {
       this.appendDummyInput()
