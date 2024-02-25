@@ -1,6 +1,8 @@
 <category name="4EVE-Sch" colour="#A80E15" css-icon="customIcon fa-solid fa-4">
     <label text="4EVE Schedules For COSCI Coding 2024"></label>
 
+    <block type="import_sch"></block>
+
     <block type="members">
         <value name="parameters">
             <shadow type="parameters">
