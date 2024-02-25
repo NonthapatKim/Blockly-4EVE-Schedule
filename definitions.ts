@@ -3,9 +3,9 @@ const foureveColor = "#A80E15";
 Blockly.Blocks['members'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("members ")
-          .appendField("=")
-          .appendField(" [ ");
+        .appendField(new Blockly.FieldVariable("members"), "members")
+        .appendField("=")
+        .appendField(" [ ");
       this.appendValueInput("parameters")
           .setCheck(null);
       this.appendDummyInput()
