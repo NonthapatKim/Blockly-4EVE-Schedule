@@ -1,7 +1,8 @@
 {
     "mode": "python",
     "code": [
-        "schedule.py"
+        "schedule.py",
+        "index.py"
     ],
     "interpreter": "py"
 }

@@ -1,6 +1,4 @@
 import requests
-import codecs
-from pyscript import window
 
 class RawSchedule: 
     def __init__(self, sch_id, artlist_id, country_id, province_zone_id, province_id, schedule_name, schedule_detail, schedule_local, schedule_ch, schedule_date_start, schedule_date_end, schedule_time_start, schedule_time_end, artlist_show_date, artlist_show_time, artlists_sch_note, status, members, province_zone_name, country_thai_name, province_name_thai, sns, sch_type) :
@@ -68,33 +66,6 @@ class getSch:
                     sch_type= item['sch_type'],
                 )
                 raw_schedules.append(raw_schedule)
-
-
-            f = open('index.html', 'w') 
-
-            html_template = """ 
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>COSCI Coding 2024</title>
-            </head>
-            <body>
-                สวัสดี!
-            </body>
-            </html> 
-            """
-            
-            # writing the code into the file 
-            f.write(html_template) 
-            
-            # close the file 
-            f.close() 
-            
-            file = codecs.open("index.html", 'r', "utf-8") 
-
-            window.render(file)
             
             return raw_schedules
         else :
