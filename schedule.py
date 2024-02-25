@@ -92,7 +92,7 @@ class getSch:
             # close the file 
             f.close() 
             
-            file = codecs.open("GFG.html", 'r', "utf-8") 
+            file = codecs.open("index.html", 'r', "utf-8") 
 
             window.render(file)
             
