@@ -100,7 +100,7 @@ class getSch:
             return []
     
 
-    def openlink(self):
+    def openlinks(self):
         webbrowser.open('https://youtu.be/sFUvyBAUxBU?si=K1nGjVhnQin4583q')
 
 

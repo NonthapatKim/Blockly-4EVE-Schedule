@@ -10,6 +10,6 @@ Blockly.Python['members'] = function(block) {
 };
 
 Blockly.Python["openlink"] = function() {
-    const code = `getSch().openlink()\n`;
+    const code = `getSch().openlinks()\n`;
     return code;
 };
