@@ -1,4 +1,5 @@
 import requests
+import webbrowser
 
 class RawSchedule: 
     def __init__(self, sch_id, artlist_id, country_id, province_zone_id, province_id, schedule_name, schedule_detail, schedule_local, schedule_ch, schedule_date_start, schedule_date_end, schedule_time_start, schedule_time_end, artlist_show_date, artlist_show_time, artlists_sch_note, status, members, province_zone_name, country_thai_name, province_name_thai, sns, sch_type) :
@@ -97,6 +98,10 @@ class getSch:
             return self.mostvisitsInTH
         else :
             return []
+    
+
+    def openlink(self):
+        webbrowser.open('https://youtu.be/sFUvyBAUxBU?si=K1nGjVhnQin4583q')
 
 
 

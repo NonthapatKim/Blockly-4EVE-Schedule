@@ -1,13 +1,8 @@
 {
-    "mode": [
-        "python",
-        "html"
-    ],
+    "mode": "python",
     "code": [
-        "schedules.py"
+        "schedules.py",
+        "graph.py"
     ],
-    "interpreter": [
-        "py",
-        "html"
-    ]
+    "interpreter": "py"
 }

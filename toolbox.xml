@@ -45,4 +45,6 @@
             </shadow>
         </value>
     </block>
+
+    <block type="openlink"></block>
 </category>

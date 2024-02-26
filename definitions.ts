@@ -26,3 +26,13 @@ Blockly.Blocks['members'] = {
       this.setColour(foureveColor);
     }
 };
+
+Blockly.Blocks["openlink"] = {
+  init: function() {
+      this.appendDummyInput()
+          .appendField("getSch().openlink()");
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(foureveColor);
+  },
+};

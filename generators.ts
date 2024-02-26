@@ -8,3 +8,8 @@ Blockly.Python['members'] = function(block) {
     const code = `members = [${parameters}]\n`;
     return code;
 };
+
+Blockly.Python["openlink"] = function() {
+    const code = `getSch().openlink()\n`;
+    return code;
+};
