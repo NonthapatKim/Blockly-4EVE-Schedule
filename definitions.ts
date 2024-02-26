@@ -10,6 +10,16 @@ Blockly.Blocks["import_sch"] = {
   },
 };
 
+Blockly.Blocks["test_var"] = {
+  init: function() {
+      this.appendDummyInput()
+          .appendField("data_fetcher = getSch()");
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(foureveColor);
+  },
+};
+
 Blockly.Blocks['members'] = {
     init: function() {
       this.appendDummyInput()

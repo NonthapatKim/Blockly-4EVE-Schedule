@@ -3,6 +3,11 @@ Blockly.Python["import_sch"] = function() {
     return code;
 };
 
+Blockly.Python["test_var"] = function() {
+    const code = `data_fetcher = getSch()\n`;
+    return code;
+};
+
 Blockly.Python['members'] = function(block) {
     const parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
     const code = `members = [${parameters}]\n`;
