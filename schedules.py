@@ -26,15 +26,22 @@ class RawSchedule:
         self.sns = sns
         self.sch_type = sch_type
 
+class mostVisitsInTHModel:
+    def __init__(self, country_id, province_id, country_thai_name, visit_count) :
+        self.country_id = country_id
+        self.province_id = province_id
+        self.country_thai_name = country_thai_name
+        self.visit_count = visit_count
+
 class getSch:
     def __init__(self) :
-        self.base_url = "http://localhost/4eve-sch-api/service/api/sch"
+        self.base_url = "http://localhost/4eve-sch-api/service/api/"
+        self.raw_schedules = []
+        self.mostvisitsInTH = []
 
     def getData(self, members):
         obj = {'nickname_list': members}
-        response = requests.post(self.base_url, json=obj)
-
-        raw_schedules = []
+        response = requests.post(f"{self.base_url}sch", json=obj)
 
         if response.status_code == 200:
             data = response.json()
@@ -65,11 +72,34 @@ class getSch:
                     sns= item['sns'],
                     sch_type= item['sch_type'],
                 )
-                raw_schedules.append(raw_schedule)
+                self.raw_schedules.append(raw_schedule)
             
-            return raw_schedules
+            return self.raw_schedules
         else :
             return []
+        
+    def VisitInThai(self):
+        response = requests.get(f"{self.base_url}sch/get-visitInthai")
+
+        if response.status_code == 200:
+            data = response.json()
+
+            for item in data['response']:
+                mostvisitsTH = mostVisitsInTHModel(
+                    country_id= item['country_id'],
+                    province_id= item['province_id'],
+                    country_thai_name= item['country_thai_name'],
+                    visit_count= item['visit_count']
+                )
+
+                self.mostvisitsInTH.append(mostvisitsTH)
+
+            return self.mostvisitsInTH
+        else :
+            return []
+
+
+
 
             
 
