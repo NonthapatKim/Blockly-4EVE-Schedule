@@ -15,6 +15,6 @@ Blockly.Python['members'] = function(block) {
 };
 
 Blockly.Python["openlink"] = function() {
-    const code = `getSch().openlinks()\n`;
+    const code = `data_fetcher.openlinks()\n`;
     return code;
 };

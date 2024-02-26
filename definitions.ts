@@ -40,7 +40,7 @@ Blockly.Blocks['members'] = {
 Blockly.Blocks["openlink"] = {
   init: function() {
       this.appendDummyInput()
-          .appendField("getSch().openlinks()");
+          .appendField("data_fetcher.openlinks()");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(foureveColor);
