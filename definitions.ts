@@ -10,6 +10,16 @@ Blockly.Blocks["import_sch"] = {
   },
 };
 
+Blockly.Blocks["import_codecs"] = {
+  init: function() {
+      this.appendDummyInput()
+          .appendField("import codecs");
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(foureveColor);
+  },
+};
+
 Blockly.Blocks['members'] = {
     init: function() {
       this.appendDummyInput()
