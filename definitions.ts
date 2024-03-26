@@ -54,19 +54,19 @@ Blockly.Blocks['member_select'] = {
   }
 }; 
 
-// Blockly.Blocks['func_select'] = {
-//   init: function() {
-//     this.appendDummyInput()
-//         .appendField(new Blockly.FieldDropdown([["dataVisit","dataVisit"], ["dataVisitInThai","dataVisitInThai"], ["dataSNSCount","dataSNSCount"], ["dataSchTypeCount","dataSchTypeCount"], ["dataAllSchTypeCount","dataAllSchTypeCount"], ["dataYears","dataYears"]]), "select_var");
-//         .appendField(" = ")
-//         .appendField(".")
-//         .appendField(new Blockly.FieldVariable("data"), "data_select_var")
-//         .appendField("(")
-//         .appendField(new Blockly.FieldDropdown([["getVisit","getVisit"], ["VisitInThai","VisitInThai"], ["getCountSNS","getCountSNS"], ["getCountSchType","getCountSchType"], ["getCountAllType","getCountAllType"], ["getschYearType","getschYearType"]]), "func_select_var")
-//         .appendField(")");
-//     this.setInputsInline(true);
-//     this.setPreviousStatement(true, null);
-//     this.setNextStatement(true, null);
-//     this.setColour(foureveColor);
-//   }
-// }; 
+Blockly.Blocks['func_select'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["dataVisit","dataVisit"], ["dataVisitInThai","dataVisitInThai"], ["dataSNSCount","dataSNSCount"], ["dataSchTypeCount","dataSchTypeCount"], ["dataAllSchTypeCount","dataAllSchTypeCount"], ["dataYears","dataYears"]]), "select_var")
+        .appendField(" = ")
+        .appendField(".")
+        .appendField(new Blockly.FieldVariable("data"), "data_select_var")
+        .appendField("(")
+        .appendField(new Blockly.FieldDropdown([["getVisit","getVisit"], ["VisitInThai","VisitInThai"], ["getCountSNS","getCountSNS"], ["getCountSchType","getCountSchType"], ["getCountAllType","getCountAllType"], ["getschYearType","getschYearType"]]), "func_select_var")
+        .appendField(")");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(foureveColor);
+  }
+}; 

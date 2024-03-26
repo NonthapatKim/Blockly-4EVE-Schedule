@@ -6,7 +6,7 @@ Blockly.Python["import_sch"] = function() {
 Blockly.Python["data_var"] = function() {
     var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
     const code = `${data_select_var} = getData()`;
-    return [code, 0];
+    return code;
 };
 
 Blockly.Python['members'] = function(block) {
@@ -23,10 +23,10 @@ Blockly.Python['member_select'] = function(block) {
     return code;
 }; 
 
-// Blockly.Python['func_select'] = function(block) {
-//     var func_select_var = block.getFieldValue('select_var');
-//     var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
-//     var func_select_var = block.getFieldValue('func_select_var');
-//     var code = `${func_select_var} = ${data_select_var}.(${func_select_var})`;
-//     return code;
-// }; 
+Blockly.Python['func_select'] = function(block) {
+    var func_select_var = block.getFieldValue('select_var');
+    var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
+    var func_select_var = block.getFieldValue('func_select_var');
+    var code = `${func_select_var} = ${data_select_var}.(${func_select_var})`;
+    return [code, 0];
+}; 
