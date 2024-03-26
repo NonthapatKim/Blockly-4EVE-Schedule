@@ -3,7 +3,7 @@
 
     <block type="import_sch"></block>
 
-    <block type="data_var"></block>
+    <block type="data_init"></block>
 
     <block type="members">
         <value name="parameters">

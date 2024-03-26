@@ -3,9 +3,9 @@ Blockly.Python["import_sch"] = function() {
     return code;
 };
 
-Blockly.Python["data_var"] = function() {
-    var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
-    const code = `${data_select_var} = getData()`;
+Blockly.Python['data_init'] = function(block) {
+    var data = Blockly.Python.nameDB_.getName(block.getFieldValue('data'), Blockly.VARIABLE_CATEGORY_NAME);
+    var code = `${data} = getData()\n`;
     return code;
 };
 
@@ -28,5 +28,5 @@ Blockly.Python['func_select'] = function(block) {
     var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var func_select_var = block.getFieldValue('func_select_var');
     var code = `${func_select_var} = ${data_select_var}.(${func_select_var})`;
-    return [code, 0];
+    return code;
 }; 
