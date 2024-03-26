@@ -32,7 +32,7 @@ Blockly.Blocks['member_select'] = {
     this.appendDummyInput()
         .appendField("member ")
         .appendField(" = ")
-        .appendField(new Blockly.FieldDropdown([["Mind","Mind"], ["Jorin","Jorin"], ["Taaom","Taaom"], ["Hannah","Hannah"], ["Fai","Fai"], ["Punch","Punch"], ["Aheye","Aheye"]]), "members");
+        .appendField(new Blockly.FieldDropdown([["Mind","'Mind'"], ["Jorin","'Jorin'"], ["Taaom","'Taaom'"], ["Hannah","'Hannah'"], ["Fai","'Fai'"], ["Punch","'Punch'"], ["Aheye","'Aheye'"]]), "members");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
