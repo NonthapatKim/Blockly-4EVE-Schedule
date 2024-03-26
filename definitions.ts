@@ -110,3 +110,14 @@ Blockly.Blocks['chart_select_1'] = {
     this.setColour(foureveColor);
   }
 };
+
+Blockly.Blocks['total_records'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("total_records_array"), "total_records_var")
+        .appendField(' = [int(x) for x in item.total_records.split(",")]');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(foureveColor);
+  }
+};

@@ -49,3 +49,9 @@ Blockly.Python['chart_select_1'] = function(block) {
     var code = `${chart_var} = .add(${loop_i_var}.${parameters_select}, ${loop_i_var}.${parameters_select})`;
     return code;
 }; 
+
+Blockly.Python['total_records'] = function(block) {
+    var total_records_var = Blockly.Python.nameDB_.getName(block.getFieldValue('total_records_var'), Blockly.VARIABLE_CATEGORY_NAME);
+    var code = `${total_records_var} = [int(x) for x in item.total_records.split(",")]`;
+    return code;
+}; 

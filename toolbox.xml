@@ -106,4 +106,6 @@
     </block>
 
     <block type="chart_select_1"></block>
+
+    <block type="total_records"></block>
 </category>
