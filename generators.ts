@@ -19,7 +19,7 @@ Blockly.Python['members'] = function(block) {
 Blockly.Python['member_select'] = function(block) {
     var member_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('member_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var members = block.getFieldValue('members');
-    var code = `${member_select_var} = ${members}`;
+    var code = `${member_select_var} = ${members}\n`;
     return code;
 }; 
 
@@ -27,7 +27,7 @@ Blockly.Python['func_select'] = function(block) {
     var select_var = block.getFieldValue('select_var');
     var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var func_select_var = block.getFieldValue('func_select_var');
-    var code = `${select_var} = ${data_select_var}.${func_select_var}`;
+    var code = `${select_var} = ${data_select_var}.${func_select_var}\n`;
     return code;
 }; 
 
@@ -37,7 +37,7 @@ Blockly.Python['data_select_artlist'] = function(block) {
     var members = block.getFieldValue('members');
     const type_parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
 
-    var code = `${select_artlist_var} = ${data_select_var}.getDataArtswithType(${members}, [${type_parameters}])`;
+    var code = `${select_artlist_var} = ${data_select_var}.getDataArtswithType(${members}, [${type_parameters}])\n`;
     return code;
 }; 
 
@@ -46,14 +46,14 @@ Blockly.Python['chart_select_1'] = function(block) {
     var loop_i_var = Blockly.Python.nameDB_.getName(block.getFieldValue('loop_i_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var parameters_select = block.getFieldValue('parameters_select');
 
-    var code = `${chart_var} = .add(${loop_i_var}.${parameters_select}, ${loop_i_var}.${parameters_select})`;
+    var code = `${chart_var} = .add(${loop_i_var}.${parameters_select}, ${loop_i_var}.${parameters_select})\n`;
     return code;
 }; 
 
 Blockly.Python['total_records'] = function(block) {
     var total_records_var = Blockly.Python.nameDB_.getName(block.getFieldValue('total_records_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var loop_i_var = Blockly.Python.nameDB_.getName(block.getFieldValue('loop_i_var'), Blockly.VARIABLE_CATEGORY_NAME);
-    var code = `${total_records_var} = [int(x) for x in ${loop_i_var}.total_records.split(",")]`;
+    var code = `${total_records_var} = [int(x) for x in ${loop_i_var}.total_records.split(",")]\n`;
     return code;
 }; 
 
@@ -61,6 +61,6 @@ Blockly.Python['chart_title_block'] = function(block) {
     var chart_var = Blockly.Python.nameDB_.getName(block.getFieldValue('chart_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var chart_title_sel = block.getFieldValue('chart_title_sel');
 
-    var code = `${chart_var}.title = ${chart_title_sel}`;
+    var code = `${chart_var}.title = ${chart_title_sel}\n`;
     return code;
 }; 
