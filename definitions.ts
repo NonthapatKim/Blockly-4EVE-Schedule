@@ -129,7 +129,7 @@ Blockly.Blocks['chart_title_block'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("name"), "chart_var")
       .appendField(".title = (")
-      .appendField(new Blockly.FieldDropdown([["4EVE ไปแสดงที่ไหนมาแล้วบ้างจากทั่วโลก?","4EVE ไปแสดงที่ไหนมาแล้วบ้างจากทั่วโลก? (งาน)"], ["4EVE ไปแสดงที่ไหนในไทยมาแล้วบ้าง?","4EVE ไปแสดงที่ไหนในไทยมาแล้วบ้าง? (งาน)"], ["4EVE ไปท่องโลกในแพลตฟอร์มไหนมาบ้าง?","4EVE ไปท่องโลกในแพลตฟอร์มไหนมาบ้าง? (งาน)"], ["สถิติประเภทงานต่าง ๆ ของ 4EVE","สถิติประเภทงานต่าง ๆ ของ 4EVE (งาน)"], ["สถิติประเภทการออกงานทั้งหมดของ 4EVE","สถิติประเภทการออกงานทั้งหมดของ 4EVE (งาน)"], ["สถิติงานทั้งหมดของ 4EVE ตั้งแต่ปี 2020 จนถึง 2024","สถิติงานทั้งหมดของ 4EVE ตั้งแต่ปี 2020 จนถึง 2024 (งาน)"], ["สถิติของเมมเบอร์ 4EVE ในแต่ละประเภทงาน","สถิติของเมมเบอร์ 4EVE ในแต่ละประเภทงาน"]]), "chart_title_sel")
+      .appendField(new Blockly.FieldDropdown([["Where has 4EVE been performed around the world?","Where has 4EVE been performed around the world?"], ["Where has 4EVE performed in Thailand?","Where has 4EVE performed in Thailand?"], ["4EVE with online platforms","4EVE with online platforms"], ["Statistics on various 4EVE event types","Statistics on various 4EVE event types"], ["Statistics on all 4EVE event types","Statistics on all 4EVE event types"], ["All 4EVE event statistics from 2020 until 2024.","All 4EVE event statistics from 2020 until 2024."], ["Statistics of 4EVE members in each event type","Statistics of 4EVE members in each event type"]]), "chart_title_sel")
       .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
