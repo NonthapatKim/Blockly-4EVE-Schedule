@@ -115,9 +115,11 @@ Blockly.Blocks['total_records'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldVariable("total_records_array"), "total_records_var")
-        .appendField(' = [int(x) for x in ')
+        .appendField(" = [ ")
+        .appendField("int(x) for x in")
         .appendField(new Blockly.FieldVariable("i"), "loop_i_var")
-        .appendField(' total_records.split(",")]');
+        .appendField("total_records.split(',')")
+        .appendField("]");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(foureveColor);
