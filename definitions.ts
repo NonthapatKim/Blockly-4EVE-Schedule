@@ -66,3 +66,25 @@ Blockly.Blocks['func_select'] = {
     this.setColour(foureveColor);
   }
 }; 
+
+Blockly.Blocks['data_select_artlist'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("dataArtswithType"), "select_artlist_var")
+      .appendField(" = ")
+      .appendField(new Blockly.FieldVariable("data"), "data_select_var")
+      .appendField(".")
+      .appendField("getDataArtswithType")
+      .appendField("(")
+      .appendField(new Blockly.FieldDropdown([["Mind","'Mind'"], ["Jorin","'Jorin'"], ["Taaom","'Taaom'"], ["Hannah","'Hannah'"], ["Fai","'Fai'"], ["Punch","'Punch'"], ["Aheye","'Aheye'"]]), "members")
+      .appendField(", ");
+    this.appendValueInput("parameters")
+      .setCheck(null);
+    this.appendDummyInput()
+      .appendField(")")
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(foureveColor);
+  }
+}; 

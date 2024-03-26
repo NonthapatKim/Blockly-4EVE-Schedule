@@ -1,5 +1,5 @@
 <category name="4EVE-Sch" colour="#A80E15" css-icon="customIcon fa-solid fa-4">
-    <label text="4EVE Schedules For COSCI Coding 2024"></label>
+    <label text="4EVE Schedules Dataset For COSCI Coding 2024"></label>
 
     <block type="import_sch"></block>
 
@@ -51,4 +51,57 @@
     <block type="member_select"></block>
 
     <block type="func_select"></block>
+
+    <block type="data_select_artlist">
+        <value name="parameters">
+            <shadow type="parameters">
+                <mutation color="#A80E15" items="9" limit="9" inputType="string" />
+                <value name="input_1">
+                    <shadow type="inline_string">
+                        <field name="value">โชว์</field>
+                    </shadow>
+                </value>
+                <value name="input_2">
+                    <shadow type="inline_string">
+                        <field name="value">รายการ/ละคร ทีวี</field>
+                    </shadow>
+                </value>
+                <value name="input_3">
+                    <shadow type="inline_string">
+                        <field name="value">รายการออนไลน์</field>
+                    </shadow>
+                </value>
+                <value name="input_4">
+                    <shadow type="inline_string">
+                        <field name="value">Live Online/วิทยุ</field>
+                    </shadow>
+                </value>
+                <value name="input_5">
+                    <shadow type="inline_string">
+                        <field name="value">งานภายใน/งานปิด</field>
+                    </shadow>
+                </value>
+                <value name="input_6">
+                    <shadow type="inline_string">
+                        <field name="value">อื่น ๆ</field>
+                    </shadow>
+                </value>
+                <value name="input_7">
+                    <shadow type="inline_string">
+                        <field name="value">Press Tour | พบปะพูดคุยกับสื่อ</field>
+                    </shadow>
+                </value>
+                <value name="input_8">
+                    <shadow type="inline_string">
+                        <field name="value">คอนเสิร์ตใหญ่</field>
+                    </shadow>
+                </value>
+                <value name="input_9">
+                    <shadow type="inline_string">
+                        <field name="value">เทศกาล/เทศกาลดนตรี</field>
+                    </shadow>
+                </value>
+            </shadow>
+        </value>
+    </block>
 </category>
