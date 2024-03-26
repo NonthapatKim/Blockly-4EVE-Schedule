@@ -2,3 +2,11 @@ node_modules
 package-lock.json
 package.json
 index.py
+graph.py
+chart.svg
+chart-2.svg
+chart-3.svg
+chart-4.svg
+chart-5.svg
+chart-6.svg
+chart-7.svg

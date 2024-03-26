@@ -10,20 +10,10 @@ Blockly.Blocks["import_sch"] = {
   },
 };
 
-Blockly.Blocks["test_var"] = {
-  init: function() {
-      this.appendDummyInput()
-          .appendField("data_fetcher = getSch()");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(foureveColor);
-  },
-};
-
 Blockly.Blocks['members'] = {
     init: function() {
       this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("members"), "members")
+        .appendField("members ")
         .appendField("=")
         .appendField(" [ ");
       this.appendValueInput("parameters")
@@ -37,12 +27,14 @@ Blockly.Blocks['members'] = {
     }
 };
 
-Blockly.Blocks["openlink"] = {
+Blockly.Blocks['member_select'] = {
   init: function() {
-      this.appendDummyInput()
-          .appendField("data_fetcher.openlinks()");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour(foureveColor);
-  },
-};
+    this.appendDummyInput()
+        .appendField("member ")
+        .appendField(" = ")
+        .appendField(new Blockly.FieldDropdown([["Mind","Mind"], ["Jorin","Jorin"], ["Taaom","Taaom"], ["Hannah","Hannah"], ["Fai","Fai"], ["Punch","Punch"], ["Aheye","Aheye"]]), "members");
+    this.setInputsInline(true);
+    this.setOutput(true, null);
+    this.setColour(foureveColor);
+  }
+}; 

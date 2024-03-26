@@ -3,8 +3,6 @@
 
     <block type="import_sch"></block>
 
-    <block type="test_var"></block>
-
     <block type="members">
         <value name="parameters">
             <shadow type="parameters">
@@ -48,5 +46,5 @@
         </value>
     </block>
 
-    <block type="openlink"></block>
+    <block type="member_select"></block>
 </category>
