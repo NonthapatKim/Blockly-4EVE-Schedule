@@ -78,23 +78,21 @@ class getData:
             return []
 
     def getVisit(self):
-        try:
-            response = requests.get(f"{self.base_url}sch/get-visit")
-            response.raise_for_status() 
+        response = requests.get(f"{self.base_url}sch/get-visit")
 
-            # data = response.json()
+        if response.status_code == 200:
+            data = response.json()
 
-            for item in response.json().get('response', []):
+            for item in data['response']:
                 mostvisits = mostVisitsModel(
-                    country_thai_name=item.get('country_thai_name'),
-                    country_count=item.get('country_count')
+                    country_thai_name= item['country_thai_name'],
+                    country_count= item['country_count']
                 )
 
                 self.mostvisits.append(mostvisits)
 
             return self.mostvisits
-        except requests.RequestException as e:
-            print(f"Error fetching data: {e}")
+        else :
             return []
         
     def getCountSNS(self):
