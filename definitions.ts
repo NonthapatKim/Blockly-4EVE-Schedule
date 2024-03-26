@@ -13,7 +13,7 @@ Blockly.Blocks["import_sch"] = {
 Blockly.Blocks['members'] = {
     init: function() {
       this.appendDummyInput()
-        .appendField("members ")
+        .appendField(new Blockly.FieldVariable("members"), "members_var")
         .appendField("=")
         .appendField(" [ ");
       this.appendValueInput("parameters")
@@ -30,7 +30,7 @@ Blockly.Blocks['members'] = {
 Blockly.Blocks['member_select'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("member ")
+        .appendField(new Blockly.FieldVariable("member"), "member_select_var")
         .appendField(" = ")
         .appendField(new Blockly.FieldDropdown([["Mind","'Mind'"], ["Jorin","'Jorin'"], ["Taaom","'Taaom'"], ["Hannah","'Hannah'"], ["Fai","'Fai'"], ["Punch","'Punch'"], ["Aheye","'Aheye'"]]), "members");
     this.setInputsInline(true);
