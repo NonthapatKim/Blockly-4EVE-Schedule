@@ -50,5 +50,5 @@
 
     <block type="member_select"></block>
 
-    <block type="func_select"></block>
+    <!-- <block type="func_select"></block> -->
 </category>
