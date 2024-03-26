@@ -81,18 +81,27 @@ class getData:
         response = requests.get(f"{self.base_url}sch/get-visit")
 
         if response.status_code == 200:
-            data = response.json()
+            try:
+                data = response.json()
+            except ValueError as e:
+                print("Error decoding JSON:", e)
+                return []
 
-            for item in data['response']:
-                mostvisits = mostVisitsModel(
-                    country_thai_name= item['country_thai_name'],
-                    country_count= item['country_count']
-                )
+            if 'response' in data:
+                for item in data['response']:
+                    mostvisits = mostVisitsModel(
+                        country_thai_name=item.get('country_thai_name'),
+                        country_count=item.get('country_count')
+                    )
 
-                self.mostvisits.append(mostvisits)
+                    self.mostvisits.append(mostvisits)
 
-            return self.mostvisits
-        else :
+                return self.mostvisits
+            else:
+                print("Response does not contain 'response' key")
+                return []
+        else:
+            print("Request failed with status code:", response.status_code)
             return []
         
     def getCountSNS(self):
