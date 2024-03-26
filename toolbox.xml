@@ -58,47 +58,47 @@
                 <mutation color="#A80E15" items="9" limit="9" inputType="string" />
                 <value name="input_1">
                     <shadow type="inline_string">
-                        <field name="value">โชว์</field>
+                        <field name="value">Show</field>
                     </shadow>
                 </value>
                 <value name="input_2">
                     <shadow type="inline_string">
-                        <field name="value">รายการ/ละคร ทีวี</field>
+                        <field name="value">Program/Drama TV</field>
                     </shadow>
                 </value>
                 <value name="input_3">
                     <shadow type="inline_string">
-                        <field name="value">รายการออนไลน์</field>
+                        <field name="value">Online Content Program</field>
                     </shadow>
                 </value>
                 <value name="input_4">
                     <shadow type="inline_string">
-                        <field name="value">Live Online/วิทยุ</field>
+                        <field name="value">Live Online/Radio</field>
                     </shadow>
                 </value>
                 <value name="input_5">
                     <shadow type="inline_string">
-                        <field name="value">งานภายใน/งานปิด</field>
+                        <field name="value">Close Event</field>
                     </shadow>
                 </value>
                 <value name="input_6">
                     <shadow type="inline_string">
-                        <field name="value">อื่น ๆ</field>
+                        <field name="value">Other</field>
                     </shadow>
                 </value>
                 <value name="input_7">
                     <shadow type="inline_string">
-                        <field name="value">Press Tour | พบปะพูดคุยกับสื่อ</field>
+                        <field name="value">Press Tour</field>
                     </shadow>
                 </value>
                 <value name="input_8">
                     <shadow type="inline_string">
-                        <field name="value">คอนเสิร์ตใหญ่</field>
+                        <field name="value">Solo Concert</field>
                     </shadow>
                 </value>
                 <value name="input_9">
                     <shadow type="inline_string">
-                        <field name="value">เทศกาล/เทศกาลดนตรี</field>
+                        <field name="value">Festival</field>
                     </shadow>
                 </value>
             </shadow>
