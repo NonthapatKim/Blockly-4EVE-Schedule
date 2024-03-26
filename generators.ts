@@ -24,9 +24,9 @@ Blockly.Python['member_select'] = function(block) {
 }; 
 
 Blockly.Python['func_select'] = function(block) {
-    var func_select_var = block.getFieldValue('select_var');
+    var select_var = block.getFieldValue('select_var');
     var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var func_select_var = block.getFieldValue('func_select_var');
-    var code = `${func_select_var} = ${data_select_var}.${func_select_var}`;
+    var code = `${select_var} = ${data_select_var}.${func_select_var}`;
     return code;
 }; 
