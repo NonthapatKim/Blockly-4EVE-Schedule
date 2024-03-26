@@ -7,7 +7,7 @@ import requests
 class getData:
     def __init__(self) :
         # self.base_url = "http://localhost/4eve-sch-api/service/api/"
-        self.base_url = "https://78eb-49-49-231-241.ngrok-free.app/"
+        self.base_url = "https://78eb-49-49-231-241.ngrok-free.app/api/"
         self.raw_schedules = []
         self.mostvisits = []
         self.mostvisitsInTH = []
