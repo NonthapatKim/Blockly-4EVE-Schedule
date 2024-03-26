@@ -6,7 +6,7 @@ Blockly.Python["import_sch"] = function() {
 Blockly.Python["data_var"] = function() {
     var data_select_var = Blockly.Python.nameDB_.getName(block.getFieldValue('data_select_var'), Blockly.VARIABLE_CATEGORY_NAME);
     const code = `${data_select_var} = getData()`;
-    return code;
+    return [code, 0];
 };
 
 Blockly.Python['members'] = function(block) {
