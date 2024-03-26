@@ -59,9 +59,7 @@ Blockly.Blocks['func_select'] = {
         .appendField(" = ")
         .appendField(new Blockly.FieldVariable("data"), "data_select_var")
         .appendField(".")
-        .appendField("(")
-        .appendField(new Blockly.FieldDropdown([["getVisit","getVisit"], ["VisitInThai","VisitInThai"], ["getCountSNS","getCountSNS"], ["getCountSchType","getCountSchType"], ["getCountAllType","getCountAllType"], ["getschYearType","getschYearType"]]), "func_select_var")
-        .appendField(")");
+        .appendField(new Blockly.FieldDropdown([["getVisit()","getVisit()"], ["VisitInThai()","VisitInThai()"], ["getCountSNS()","getCountSNS()"], ["getCountSchType()","getCountSchType()"], ["getCountAllType()","getCountAllType()"], ["getschYearType()","getschYearType()"]]), "func_select_var");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
