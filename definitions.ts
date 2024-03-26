@@ -91,6 +91,20 @@ Blockly.Blocks['data_select_artlist'] = {
   }
 }; 
 
+Blockly.Blocks['chart_title'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("name"), "chart_var")
+      .appendField(".title = (")
+      .appendField(new Blockly.FieldDropdown([["4EVE ไปแสดงที่ไหนมาแล้วบ้างจากทั่วโลก?","4EVE ไปแสดงที่ไหนมาแล้วบ้างจากทั่วโลก? (งาน)"], ["4EVE ไปแสดงที่ไหนในไทยมาแล้วบ้าง?","4EVE ไปแสดงที่ไหนในไทยมาแล้วบ้าง? (งาน)"], ["4EVE ไปท่องโลกในแพลตฟอร์มไหนมาบ้าง?","4EVE ไปท่องโลกในแพลตฟอร์มไหนมาบ้าง? (งาน)"], ["สถิติประเภทงานต่าง ๆ ของ 4EVE","สถิติประเภทงานต่าง ๆ ของ 4EVE (งาน)"], ["สถิติประเภทการออกงานทั้งหมดของ 4EVE","สถิติประเภทการออกงานทั้งหมดของ 4EVE (งาน)"], ["สถิติงานทั้งหมดของ 4EVE ตั้งแต่ปี 2020 จนถึง 2024","สถิติงานทั้งหมดของ 4EVE ตั้งแต่ปี 2020 จนถึง 2024 (งาน)"], ["สถิติของเมมเบอร์ 4EVE ในแต่ละประเภทงาน","สถิติของเมมเบอร์ 4EVE ในแต่ละประเภทงาน"]]), "chart_title_sel")
+      .appendField(")");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(foureveColor);
+  }
+};
+
 Blockly.Blocks['chart_select_1'] = {
   init: function() {
     this.appendDummyInput()

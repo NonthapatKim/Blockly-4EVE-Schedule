@@ -17,16 +17,6 @@ dataArtswithType = data.getDataArtswithType("Fai", ["โชว์", "ราย�
 # for value in dataVisitInThai:
 #     chart.x_labels = value.province_name_thai
 
-### visitInthai ###
-
-chart = pygal.Bar()
-chart.title = '4EVE ไปแสดงที่ไหนในไทยมาแล้วบ้าง?'
-
-for item in dataVisitInThai:
-    chart.add(item.province_name_thai, item.visit_count)
-
-# chart.render_to_file('chart.svg')
-
 ### visit-Aroundtheword ###
 
 # chart = pygal.HorizontalBar()
@@ -36,6 +26,16 @@ for item in dataVisitInThai:
 #     chart.add(item.country_thai_name, item.country_count)
 
 # chart.render_to_file('chart-2.svg')
+
+### visitInthai ###
+
+# chart = pygal.Bar()
+# chart.title = '4EVE ไปแสดงที่ไหนในไทยมาแล้วบ้าง?'
+
+# for item in dataVisitInThai:
+#     chart.add(item.province_name_thai, item.visit_count)
+
+# chart.render_to_file('chart.svg')
 
 ### SNS-Count (Pie) ###
 
