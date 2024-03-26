@@ -129,7 +129,7 @@ Blockly.Blocks['chart_title_block'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("name"), "chart_var")
       .appendField(".title = (")
-      .appendField(new Blockly.FieldDropdown([["Where has 4EVE been performed around the world?","Where has 4EVE been performed around the world?"], ["Where has 4EVE performed in Thailand?","Where has 4EVE performed in Thailand?"], ["4EVE with online platforms","4EVE with online platforms"], ["Statistics on various 4EVE event types","Statistics on various 4EVE event types"], ["Statistics on all 4EVE event types","Statistics on all 4EVE event types"], ["All 4EVE event statistics from 2020 until 2024.","All 4EVE event statistics from 2020 until 2024."], ["Statistics of 4EVE members in each event type","Statistics of 4EVE members in each event type"]]), "chart_title_sel")
+      .appendField(new Blockly.FieldDropdown([["Where has 4EVE been performed around the world?","'Where has 4EVE been performed around the world?'"], ["Where has 4EVE performed in Thailand?","'Where has 4EVE performed in Thailand?'"], ["4EVE with online platforms","'4EVE with online platforms'"], ["Statistics on various 4EVE event types","'Statistics on various 4EVE event types'"], ["Statistics on all 4EVE event types","'Statistics on all 4EVE event types'"], ["All 4EVE event statistics from 2020 until 2024.","'All 4EVE event statistics from 2020 until 2024.'"], ["Statistics of 4EVE members in each event type","'Statistics of 4EVE members in each event type'"]]), "chart_title_sel")
       .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
