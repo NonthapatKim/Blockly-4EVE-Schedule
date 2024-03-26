@@ -10,6 +10,20 @@ Blockly.Blocks["import_sch"] = {
   },
 };
 
+
+Blockly.Blocks['data_var'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("data"), "data_select_var")
+        .appendField(" = ")
+        .appendField("getData()");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(foureveColor);
+  }
+}; 
+
 Blockly.Blocks['members'] = {
     init: function() {
       this.appendDummyInput()
@@ -33,6 +47,23 @@ Blockly.Blocks['member_select'] = {
         .appendField(new Blockly.FieldVariable("member"), "member_select_var")
         .appendField(" = ")
         .appendField(new Blockly.FieldDropdown([["Mind","'Mind'"], ["Jorin","'Jorin'"], ["Taaom","'Taaom'"], ["Hannah","'Hannah'"], ["Fai","'Fai'"], ["Punch","'Punch'"], ["Aheye","'Aheye'"]]), "members");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(foureveColor);
+  }
+}; 
+
+Blockly.Blocks['func_select'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["dataVisit","dataVisit"], ["dataVisitInThai","dataVisitInThai"], ["dataSNSCount","dataSNSCount"], ["dataSchTypeCount","dataSchTypeCount"], ["dataAllSchTypeCount","dataAllSchTypeCount"], ["dataYears","dataYears"]]), "select_var");
+        .appendField(" = ")
+        .appendField(".")
+        .appendField(new Blockly.FieldVariable("data"), "data_select_var")
+        .appendField("(")
+        .appendField(new Blockly.FieldDropdown([["getVisit","getVisit"], ["VisitInThai","VisitInThai"], ["getCountSNS","getCountSNS"], ["getCountSchType","getCountSchType"], ["getCountAllType","getCountAllType"], ["getschYearType","getschYearType"]]), "func_select_var")
+        .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

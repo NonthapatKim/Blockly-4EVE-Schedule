@@ -3,6 +3,8 @@
 
     <block type="import_sch"></block>
 
+    <block type="data_var"></block>
+
     <block type="members">
         <value name="parameters">
             <shadow type="parameters">
@@ -47,4 +49,6 @@
     </block>
 
     <block type="member_select"></block>
+
+    <block type="func_select"></block>
 </category>
