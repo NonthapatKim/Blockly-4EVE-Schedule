@@ -105,9 +105,9 @@
         </value>
     </block>
 
-    <block type="chart_title"></block>
-
     <block type="chart_select_1"></block>
 
     <block type="total_records"></block>
+
+     <block type="chart_title"></block>
 </category>
