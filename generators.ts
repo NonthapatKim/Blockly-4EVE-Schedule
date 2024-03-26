@@ -37,6 +37,6 @@ Blockly.Python['data_select_artlist'] = function(block) {
     var members = block.getFieldValue('members');
     const type_parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
 
-    var code = `${select_artlist_var} = ${data_select_var}.getDataArtswithType(${members}, ${type_parameters})`;
+    var code = `${select_artlist_var} = ${data_select_var}.getDataArtswithType(${members}, [${type_parameters}])`;
     return code;
 }; 

@@ -77,11 +77,13 @@ Blockly.Blocks['data_select_artlist'] = {
       .appendField("getDataArtswithType")
       .appendField("(")
       .appendField(new Blockly.FieldDropdown([["Mind","'Mind'"], ["Jorin","'Jorin'"], ["Taaom","'Taaom'"], ["Hannah","'Hannah'"], ["Fai","'Fai'"], ["Punch","'Punch'"], ["Aheye","'Aheye'"]]), "members")
-      .appendField(", ");
+      .appendField(", ")
+      .appendField(" [ ");
     this.appendValueInput("parameters")
       .setCheck(null);
     this.appendDummyInput()
-      .appendField(")")
+      .appendField(" ] ")
+      .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
