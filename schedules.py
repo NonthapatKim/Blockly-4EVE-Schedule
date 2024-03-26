@@ -3,7 +3,6 @@ from model import *
 
 # imports
 import requests
-import logging
 
 class getData:
     def __init__(self) :
@@ -81,20 +80,21 @@ class getData:
     def getVisit(self):
         try:
             response = requests.get(f"{self.base_url}sch/get-visit")
-            response.raise_for_status()  
+            response.raise_for_status() 
+
             data = response.json()
+
             for item in data.get('response', []):
                 mostvisits = mostVisitsModel(
-                    country_thai_name=item.get('country_thai_name', ''),
-                    country_count=item.get('country_count', '')
+                    country_thai_name=item.get('country_thai_name'),
+                    country_count=item.get('country_count')
                 )
+
                 self.mostvisits.append(mostvisits)
+
             return self.mostvisits
-        except requests.exceptions.RequestException as e:
-            logging.error(f"Error fetching data: {e}")
-            return []
-        except ValueError as e:
-            logging.error(f"Error decoding JSON: {e}")
+        except requests.RequestException as e:
+            print(f"Error fetching data: {e}")
             return []
         
     def getCountSNS(self):
