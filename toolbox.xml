@@ -109,5 +109,5 @@
 
     <block type="total_records"></block>
 
-     <block type="chart_title"></block>
+     <block type="chart_title_block"></block>
 </category>

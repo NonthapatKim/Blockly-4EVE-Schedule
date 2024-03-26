@@ -124,7 +124,7 @@ Blockly.Blocks['total_records'] = {
   }
 };
 
-Blockly.Blocks['chart_title'] = {
+Blockly.Blocks['chart_title_block'] = {
   init: function() {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("name"), "chart_var")

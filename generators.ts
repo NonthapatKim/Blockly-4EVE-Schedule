@@ -57,7 +57,7 @@ Blockly.Python['total_records'] = function(block) {
     return code;
 }; 
 
-Blockly.Python['chart_title'] = function(block) {
+Blockly.Python['chart_title_block'] = function(block) {
     var chart_var = Blockly.Python.nameDB_.getName(block.getFieldValue('chart_var'), Blockly.VARIABLE_CATEGORY_NAME);
     var chart_title_sel = block.getFieldValue('chart_title_sel');
 
