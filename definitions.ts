@@ -34,7 +34,8 @@ Blockly.Blocks['member_select'] = {
         .appendField(" = ")
         .appendField(new Blockly.FieldDropdown([["Mind","Mind"], ["Jorin","Jorin"], ["Taaom","Taaom"], ["Hannah","Hannah"], ["Fai","Fai"], ["Punch","Punch"], ["Aheye","Aheye"]]), "members");
     this.setInputsInline(true);
-    this.setOutput(true, null);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(foureveColor);
   }
 }; 
