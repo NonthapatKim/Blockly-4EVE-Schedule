@@ -104,4 +104,6 @@
             </shadow>
         </value>
     </block>
+
+    <block type="chart_select_1"></block>
 </category>

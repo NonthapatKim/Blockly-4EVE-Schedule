@@ -90,3 +90,23 @@ Blockly.Blocks['data_select_artlist'] = {
     this.setColour(foureveColor);
   }
 }; 
+
+Blockly.Blocks['chart_select_1'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("name"), "chart_var")
+      .appendField(".add(")
+      .appendField(new Blockly.FieldVariable("i"), "loop_i_var")
+      .appendField(".")
+      .appendField(new Blockly.FieldDropdown([["province_name_thai","province_name_thai"], ["visit_count","visit_count"], ["country_thai_name","country_thai_name"], ["country_count","country_count"], ["social_network_name","social_network_name"], ["social_count","social_count"], ["sch_category_name","sch_category_name"], ["sch_count","sch_count"], ["label","label"], ["data_count","data_count"], ["sch_type_count", "sch_type_count"]]), "parameters_select")
+      .appendField(",")
+      .appendField(new Blockly.FieldVariable("i"), "loop_i_var")
+      .appendField(".")
+      .appendField(new Blockly.FieldDropdown([["province_name_thai","province_name_thai"], ["visit_count","visit_count"], ["country_thai_name","country_thai_name"], ["country_count","country_count"], ["social_network_name","social_network_name"], ["social_count","social_count"], ["sch_category_name","sch_category_name"], ["sch_count","sch_count"], ["label","label"], ["data_count","data_count"], ["sch_type_count", "sch_type_count"]]), "parameters_select")
+      .appendField(")");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(foureveColor);
+  }
+};

@@ -40,3 +40,12 @@ Blockly.Python['data_select_artlist'] = function(block) {
     var code = `${select_artlist_var} = ${data_select_var}.getDataArtswithType(${members}, [${type_parameters}])`;
     return code;
 }; 
+
+Blockly.Python['chart_select_1'] = function(block) {
+    var chart_var = Blockly.Python.nameDB_.getName(block.getFieldValue('chart_var'), Blockly.VARIABLE_CATEGORY_NAME);
+    var loop_i_var = Blockly.Python.nameDB_.getName(block.getFieldValue('loop_i_var'), Blockly.VARIABLE_CATEGORY_NAME);
+    var parameters_select = block.getFieldValue('parameters_select');
+
+    var code = `${chart_var} = .add(${loop_i_var}.${parameters_select}, ${loop_i_var}.${parameters_select})`;
+    return code;
+}; 
