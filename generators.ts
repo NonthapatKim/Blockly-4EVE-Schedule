@@ -12,5 +12,5 @@ Blockly.Python['members'] = function(block) {
 Blockly.Python['member_select'] = function(block) {
     var members = block.getFieldValue('members');
     var code = `member = ${members}`;
-    return [code, 0];
+    return code;
 };  
